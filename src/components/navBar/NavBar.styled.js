@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
-export const Navigation = styled.nav`
-  display: flex;
-  border: 2px solid;
-  justify-content: space-between;
-  padding: 20px;
+export const Navigation = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffc107;
+  nav {
+    display: flex;
+
+    justify-content: space-between;
+    padding: 20px;
+  }
 
   ul {
     display: flex;

@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <ProjectContextProvider>
-        <NavBar />
         <div className="container">
+          <NavBar />
           <Route exact={true} path="/" component={ProjectList} />
           <Route exact path="/create" component={CreateProject} />
           <Route exact path="/update/:id" component={UpdateProject} />

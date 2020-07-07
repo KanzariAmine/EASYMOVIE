@@ -3,8 +3,8 @@ import { Navigation } from "./NavBar.styled";
 import { NavLink } from "react-router-dom";
 function NavBar() {
   return (
-    <header>
-      <Navigation>
+    <Navigation>
+      <nav>
         <a>
           <img
             src="https://www.easy.movie/hubfs/easymovie-full-color.svg"
@@ -23,8 +23,8 @@ function NavBar() {
             <li>Update</li>
           </NavLink>
         </ul>
-      </Navigation>
-    </header>
+      </nav>
+    </Navigation>
   );
 }
 

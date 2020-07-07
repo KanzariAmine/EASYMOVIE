@@ -10,3 +10,10 @@ body {
   background-color: #ffb75e;
   overflow: hidden;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}

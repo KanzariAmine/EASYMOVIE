@@ -25,7 +25,7 @@ function ProjectList() {
   ) : (
     <div>
       {" "}
-      <h2>No Project :)</h2>
+      <h2>No Project :(</h2>
     </div>
   );
 }
