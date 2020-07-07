@@ -1,35 +1,26 @@
 import styled from "styled-components";
 
-export const Navigation = styled.header`
-  width: 100%;
-
-  z-index: 1;
+export const Navigation = styled.nav`
   display: flex;
+  border: 2px solid;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 100px 0;
-  height: 140px;
-  margin-bottom: 60px;
+  padding: 20px;
 
-  nav {
-    ul {
-      display: flex;
-      justify-content: space-between;
-    }
-    li {
-      margin: 0 15px;
-      justify-content: space-between;
-      font-size: 1em;
-    }
-    a {
-      font-size: 1em;
-      text-decoration: none;
-      .active {
-        color: tomato;
-      }
-    }
-    a.active {
-      color: #222;
-    }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    margin: 0 15px;
+    justify-content: space-between;
+    font-size: 1em;
+  }
+  a {
+    font-size: 1em;
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500px;
   }
 `;
