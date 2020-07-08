@@ -15,6 +15,7 @@ function CreateProject() {
   const [project, setProject] = useState({
     nom: "",
     description: "",
+    duree: "",
   });
 
   const handelChange = (e) => {
@@ -25,7 +26,7 @@ function CreateProject() {
   const handelSubmit = (e) => {
     e.preventDefault();
     dispatch({ type: "ADD_PROJECT", project });
-    setProject({ nom: "", description: "" });
+    setProject({ nom: "", description: "", duree: "" });
   };
 
   return (
@@ -46,6 +47,16 @@ function CreateProject() {
           />
         </FormControl>
         <FormControl>
+          <label>Durée</label>
+          <input
+            type="number"
+            placeholder="Durée du vidéo minutes..."
+            name="duree"
+            value={project.duree}
+            onChange={handelChange}
+          />
+        </FormControl>
+        <FormControl>
           <label>Description</label>
           <Textarea
             type="text"
@@ -55,6 +66,7 @@ function CreateProject() {
             onChange={handelChange}
           />
         </FormControl>
+
         <Button>Ajouter</Button>
       </Form>
     </Container>

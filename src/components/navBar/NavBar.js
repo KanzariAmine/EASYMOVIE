@@ -5,13 +5,13 @@ function NavBar() {
   return (
     <Navigation>
       <nav>
-        <a>
+        <NavLink to="/">
           <img
             src="https://www.easy.movie/hubfs/easymovie-full-color.svg"
             alt="easy_movie_icon"
             style={{ width: "165px" }}
           />
-        </a>
+        </NavLink>
         <ul>
           <NavLink activeClassName="active" to="/">
             <li>Home</li>

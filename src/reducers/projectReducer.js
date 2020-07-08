@@ -6,8 +6,10 @@ export const projectReducer = (state, action) => {
       return [
         ...state,
         {
+          url: "https://picsum.photos/200/200",
           nom: action.project.nom,
           description: action.project.description,
+          duree: action.project.duree,
           id: uuidv4(),
         },
       ];
