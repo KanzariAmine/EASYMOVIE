@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Header,
   Container,
@@ -7,15 +7,35 @@ import {
   Textarea,
   Button,
 } from "./UpdateProject.styled";
+import { Link } from "react-router-dom";
 import { ProjectContext } from "../../context/ProjectContext";
+
 function UpdateProject(props) {
+  const [project, setProject] = useState({});
+
   const { dispatch, projects } = useContext(ProjectContext);
 
+  useEffect(() => {
+    let projectFind = projects.filter(
+      (item) => item.id === props.match.params.id
+    );
+
+    let find = projectFind[0];
+    setProject(find);
+  }, [projects, props.match.params.id]);
+
+  const handelChange = (e) => {
+    e.preventDefault();
+    setProject({ ...project, [e.target.name]: e.target.value });
+  };
+
+  const updateProject = () => {
+    dispatch({ type: "UPDATE_PROJECT", project });
+  };
   const deleteProject = () => {
     dispatch({ type: "REMOVE_PROJECT", id: props.match.params.id });
   };
-  console.log(props);
-  return projects.map((project) => (
+  return (
     <Container>
       <Header>
         <h2>Update Project</h2>
@@ -29,7 +49,17 @@ function UpdateProject(props) {
             id="nom"
             name="nom"
             value={project.nom}
-            //onChange={handelChange}
+            onChange={handelChange}
+          />
+        </FormControl>
+        <FormControl>
+          <label>Durée</label>
+          <input
+            type="number"
+            placeholder="Durée du vidéo minutes..."
+            name="duree"
+            value={project.duree}
+            onChange={handelChange}
           />
         </FormControl>
         <FormControl>
@@ -39,14 +69,22 @@ function UpdateProject(props) {
             placeholder="Descriptiont..."
             name="description"
             value={project.description}
-            //onChange={handelChange}
+            onChange={handelChange}
           />
         </FormControl>
-        <Button>Update</Button>
-        <Button onClick={deleteProject}>Delete</Button>
+        <Link to="/">
+          <Button onClick={updateProject}>Update</Button>
+        </Link>
+
+        <Link to="/">
+          <Button onClick={deleteProject}>Delete</Button>
+        </Link>
       </Form>
+      <div style={{ padding: "20px" }}>
+        <img src={project.url} alt="test" style={{ width: "100%" }} />
+      </div>
     </Container>
-  ));
+  );
 }
 
 export default UpdateProject;

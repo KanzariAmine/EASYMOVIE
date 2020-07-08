@@ -53,4 +53,5 @@ export const Button = styled.button`
   font-size: 16px;
   font-family: inherit;
   font-weight: bold;
+  cursor: pointer;
 `;

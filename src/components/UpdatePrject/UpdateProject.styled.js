@@ -1,21 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 400px;
+  width: 60%;
   max-width: 100%;
   overflow: hidden;
 `;
 
 export const Header = styled.div`
-  background-color: #f7f7f;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #f7f7f7;
   border-bottom: 1px solid #f0f0f0;
-  padding: 20px 40px;
+  padding: 20px;
   text-align: center;
 `;
 export const Form = styled.form`
+  grid-column-start: 1;
+  grid-column-end: 2;
   padding: 30px 40px;
 `;
 export const FormControl = styled.div`
@@ -54,4 +60,5 @@ export const Button = styled.button`
   font-family: inherit;
   font-weight: bold;
   margin-bottom: 10px;
+  cursor: pointer;
 `;

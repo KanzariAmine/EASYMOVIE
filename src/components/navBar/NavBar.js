@@ -13,14 +13,11 @@ function NavBar() {
           />
         </NavLink>
         <ul>
-          <NavLink activeClassName="active" to="/">
+          <NavLink to="/">
             <li>Home</li>
           </NavLink>
-          <NavLink activeClassName="active" to="/create">
+          <NavLink to="/create">
             <li>Create</li>
-          </NavLink>
-          <NavLink activeClassName="active" to="/update">
-            <li>Update</li>
           </NavLink>
         </ul>
       </nav>

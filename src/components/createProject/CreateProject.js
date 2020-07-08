@@ -44,6 +44,7 @@ function CreateProject() {
             name="nom"
             value={project.nom}
             onChange={handelChange}
+            required
           />
         </FormControl>
         <FormControl>
@@ -54,6 +55,7 @@ function CreateProject() {
             name="duree"
             value={project.duree}
             onChange={handelChange}
+            required
           />
         </FormControl>
         <FormControl>
@@ -64,6 +66,7 @@ function CreateProject() {
             name="description"
             value={project.description}
             onChange={handelChange}
+            required
           />
         </FormControl>
 

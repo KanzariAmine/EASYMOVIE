@@ -13,6 +13,18 @@ export const projectReducer = (state, action) => {
           id: uuidv4(),
         },
       ];
+    case "UPDATE_PROJECT":
+      let projectUpdated = action.project;
+      let UpdatedProjects = state.map((project) => {
+        if (project.id === projectUpdated.id) {
+          return projectUpdated;
+        }
+        return project;
+      });
+      let test = UpdatedProjects[0];
+
+      return [...state, test];
+
     case "REMOVE_PROJECT":
       return state.filter((project) => project.id !== action.id);
     default:
