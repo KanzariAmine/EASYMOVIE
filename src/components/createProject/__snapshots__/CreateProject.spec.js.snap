@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Create Project Component Should take snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm hTciaQ"
+  >
+    <div
+      class="sc-AxirZ lnfslJ"
+    >
+      <h2>
+        Ajouter Project
+      </h2>
+    </div>
+    <form
+      class="sc-AxiKw eyRPdh"
+    >
+      <div
+        class="sc-AxhCb hgRKkH"
+      >
+        <label>
+          Nom
+        </label>
+        <input
+          id="nom"
+          name="nom"
+          placeholder="Ajouter le nom du project"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-AxhCb hgRKkH"
+      >
+        <label>
+          Durée
+        </label>
+        <input
+          name="duree"
+          placeholder="Durée du vidéo minutes..."
+          required=""
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-AxhCb hgRKkH"
+      >
+        <label>
+          Description
+        </label>
+        <textarea
+          class="sc-AxhUy cQVZIA"
+          name="description"
+          placeholder="Descriptiont..."
+          required=""
+          type="text"
+        />
+      </div>
+      <button
+        class="sc-AxgMl dYYlGh"
+      >
+        Ajouter
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
